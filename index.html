@@ -1,0 +1,46 @@
+<body>
+  <h1>FindElement</h1>
+  <ol>
+    <li>mojo</li>
+    <li>mojojo</li>
+  </ol>
+  <button>hoge</button>
+  <button style="visibility: hidden;">hidden button</button>
+  <button>
+    <span>text in span-tag inside button-tag</span>
+  </button>
+  <p><a href="#">sample link</a></p>
+  <p><a href="#" style="visibility: hidden;">hidden link</a></p>
+  <p>
+    <a href="#">
+      <p>text in p-tag inside a-tag</p>
+    </a>
+  </p>
+  <div>
+    <label for="name1">text in label-tag</label>
+    <input type="text" id="name1">
+  </div>
+  <div>
+    <label for="name2" style="visibility: hidden;">hidden text in label-tag</label>
+    <input type="text" id="name2">
+  </div>
+  <div>
+    <label for="name3">
+      <span>text in span-tag inside label-tag</span>
+    </label>
+    <input type="text" id="name3">
+  </div>
+  <p id="hidden" style="visibility: hidden;">this is hidden</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d966.5182282493479!2d139.75681484790022!3d35.695491649947115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c70685c33ed%3A0x91b5327d21ac838c!2z5qCq5byP5Lya56S-44OB44Ol44O844OI44Oq44Ki44Or!5e0!3m2!1sja!2sjp!4v1583212533645!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+  <iframe id="myframe" src="https://example.com/"></iframe>
+  <div id="shadow" class="shadow"></div>
+</body>
+<script>
+  const element = document.getElementById('shadow');
+  const shadowRoot = element.attachShadow({mode: 'open'})
+  shadowRoot.innerHTML = `
+  <div class="shadow-button">
+    <button class="hoge" id="name1">Shadow Button</button>  
+  </div>
+  `
+</script>
